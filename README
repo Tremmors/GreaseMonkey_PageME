@@ -1,0 +1,8 @@
+GreaseMonkey_PageMe
+By John Trimis
+
+This is a greasemonkey script that allows you to use your keyboard to "click" next and previous.
+This finds all anchor tags and tries to figure out where the Next and Previous buttons are (if they exist)
+
+[CTRL] + [Right Arrow] OR [Shift] + [PageDown] to click Next
+[CTRL] + [Left Arrow] OR [Shift] + [PageUp] to click Previous
