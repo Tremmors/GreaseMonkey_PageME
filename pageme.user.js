@@ -134,7 +134,7 @@ function CheckElement(re, thisElement)
 			
 		}	// check the src of an img tag
 		
-		if( thisElement.firstChild )
+		if( thisElement.childNodes.length > 0 )
 		{	// Check Decendants
 		
 			if( CheckElement( re, thisElement.firstChild ) ) 
@@ -143,6 +143,16 @@ function CheckElement(re, thisElement)
 			}
 			
 		}	// Check decendants
+		
+		if( thisElement.childNodes.length > 1)
+		{	// Last descendant (google uses this)
+		
+			if( CheckElement( re, thisElement.lastChild) ) 
+			{
+				return true;
+			}
+			
+		}	// Last descendant (google uses this)
 
 	}
 	return false;
